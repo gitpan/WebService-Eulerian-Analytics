@@ -1,0 +1,23 @@
+Revision history for Perl module WebService::Eulerian::Analytics
+
+TODO
+  - Website/TPOpe : add / modify new campaigns
+  - Website/TPPublisher : add / modify publishers
+  - Website/TPMedia : add / modify medias
+
+v0.4
+  - support for Website/TPOpe methods : getById / getByName / search
+  - support for Website/TPPublisher methods : getById / getByName / search
+  - support for Website/TPMedia methods : getById / getByName / search
+  - support for Website/TPCategory methods : getById / getByName / search
+
+v0.3	Wed Sep  3 20:48:13 CEST 2008 (internal)
+  - support for Website Service methods : getById / getByName / getAll
+  - support for TPOrderInject Service methods : replay
+  - support for Website/Order Service methods : replay
+  - support for Website/TPOpedataClick Service methods : getLogByTPOpeName
+  - added examples for other languages : raw SOAP::Lite + php in other/
+
+v0.2	Tue Sep  2 16:22:08 CEST 2008	(internal)
+
+v0.1	Mon Sep  1 16:22:08 CEST 2008	(internal)
