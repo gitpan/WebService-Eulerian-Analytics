@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 #
-# $Id: tpope.pl,v 1.2 2008-09-03 18:46:02 cvscore Exp $
+# $Id: tpope.pl,v 1.1 2008-09-07 23:31:00 cvscore Exp $
 
 use strict;
 use WebService::Eulerian::Analytics::Website;
@@ -10,8 +10,8 @@ my %h_api_params	= (
  apikey	=> '',
  host 	=> '',
 );
-my $website_name= '';
-my $tpope_id	= '';
+my $website_name= 'test';
+my $tpope_id	= '1';
 my $tpope_name	= '';
 
 my $website	= new WebService::Eulerian::Analytics::Website( %h_api_params );

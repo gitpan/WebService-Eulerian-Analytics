@@ -1,6 +1,6 @@
 package WebService::Eulerian::Analytics::Website::TPCategory;
 
-# $Id: Order.pm,v 1.2 2008-09-03 15:22:48 cvscore Exp $
+# $Id: TPCategory.pm,v 1.1 2008-09-07 23:31:00 cvscore Exp $
 
 use strict;
 
@@ -12,7 +12,7 @@ our @ISA        = qw/ WebService::Eulerian::Analytics /;
 
 =head1	NAME 
 
-WebService::Eulerian::Analytics::Website::TPCategory - access to the TPCategory service for a given website : media type for campaigns of outbound traffic.
+WebService::Eulerian::Analytics::Website::TPCategory - access to the TPCategory service for a given website : category for campaigns of outbound traffic.
 
 =head1 DESCRIPTION
 

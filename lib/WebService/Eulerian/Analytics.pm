@@ -1,8 +1,8 @@
 package WebService::Eulerian::Analytics;
 
-# $Id: Analytics.pm,v 1.2 2008-09-03 15:22:48 cvscore Exp $
+# $Id: Analytics.pm,v 1.4 2008-09-21 23:30:08 cvscore Exp $
 
-our $VERSION	= 0.4;
+our $VERSION	= 0.5;
 
 use strict;
 use SOAP::Lite;

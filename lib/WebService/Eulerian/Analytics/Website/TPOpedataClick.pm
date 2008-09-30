@@ -1,6 +1,6 @@
 package WebService::Eulerian::Analytics::Website::TPOpedataClick;
 
-# $Id: TPOpedataClick.pm,v 1.2 2008-09-03 15:22:48 cvscore Exp $
+# $Id: TPOpedataClick.pm,v 1.3 2008-09-21 23:30:08 cvscore Exp $
 
 use strict;
 
@@ -40,7 +40,7 @@ sub new {
 
 =head1 METHODS
 
-=head2 getLogByOpeName : return all information on outbound clicks for a given outbound campaign
+=head2 getLogByTPOpeName : return all information on outbound clicks for a given outbound campaign
 
 Note: you can only request data on a day timespan.
 
@@ -87,6 +87,58 @@ o date_to : date to value (dd/mm/yyyy format) inclusive
 =cut
 
 sub getLogByTPOpeName	{ return shift()->call('getLogByTPOpeName', @_); }
+
+=pod
+
+=head1 METHODS
+
+=head2 getLogByTPMediaName : return all information on outbound clicks for a given outbound media
+
+Note: you can only request data on a day timespan.
+
+=head3 input
+
+=over 4
+
+=item * id of the targetted website
+
+=item * hash reference with the following parameters :
+
+o tpmedia_name : name of the outbound media
+
+o date_from : date from value (dd/mm/yyyy format)
+
+o date_to : date to value (dd/mm/yyyy format) inclusive
+
+=back
+
+=head3 output
+
+=over 4
+
+=item * array reference containing data on each outbound click
+
+=back
+
+=head3 sample
+
+	my $ra_log = $api->getLogByTPMediaName($my_website_id, {
+	  tpmedia_name	=> 'NAME_OF_TARGETTED_TPMEDIA',
+	  date_from 	=> 'DD/MM/YYYY',
+	  date_to	=> 'DD/MM/YYYY',
+	});
+	#
+	if ( $api->fault ) {
+	 die $api->faultstring();
+	}
+	#
+	for ( @{ $ra_log } ) {
+	 print "date ".localtime($_->{epoch})." | IP : ".$_->{ip}." | Channel Information : level0=".$_->{channel_0}." level1=".$_->{channel_1}." level2=".$_->{channel_2}." | Outbound Campaign : ".$_->{tpope_name}."\n";
+	}
+
+=cut
+
+sub getLogByTPMediaName	{ return shift()->call('getLogByTPMediaName', @_); }
 
 =pod
 

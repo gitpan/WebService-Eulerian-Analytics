@@ -5,7 +5,11 @@ TODO
   - Website/TPPublisher : add / modify publishers
   - Website/TPMedia : add / modify medias
 
-v0.4
+v0.5 Tue Sep 30 02:45:57 CEST 2008
+  - support for Website/TPOpedataCick : getLogByTPMediaName
+  - support for Website/TPOpe : getById / getByName / search / getURL
+
+v0.4	Sun Sep  7 18:47:20 CEST 2008 (first public release)
   - support for Website/TPOpe methods : getById / getByName / search
   - support for Website/TPPublisher methods : getById / getByName / search
   - support for Website/TPMedia methods : getById / getByName / search
