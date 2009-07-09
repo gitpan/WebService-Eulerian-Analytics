@@ -2,7 +2,7 @@ package WebService::Eulerian::Analytics;
 
 # $Id: Analytics.pm,v 1.4 2008-09-21 23:30:08 cvscore Exp $
 
-our $VERSION	= 0.5;
+our $VERSION	= 0.6;
 
 use strict;
 use SOAP::Lite;
@@ -64,7 +64,7 @@ sub new {
    _VERSION	=> $h_p{version} 	|| 'v1',
    _SERVICE	=> $h_p{service},
    _DEBUG	=> $h_p{debug}		|| 0,
-   _TIMEOUT	=> $h_p{timeout}	|| 60,
+   _TIMEOUT	=> $h_p{timeout}	|| 60 * 15, # 15 minutes
    _FAULT	=> 0,
    _FAULTDETAILS=> {},
    }, $class);

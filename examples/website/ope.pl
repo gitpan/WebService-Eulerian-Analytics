@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 #
-# $Id: ope.pl,v 1.1 2008-09-07 23:31:00 cvscore Exp $
+# $Id: ope.pl,v 1.1 2008-09-30 00:55:09 cvscore Exp $
 
 use strict;
 use WebService::Eulerian::Analytics::Website;
@@ -12,7 +12,7 @@ my %h_api_params	= (
 );
 my $website_name= 'test';
 my $ope_id	= 1;
-my $ope_name	= '';
+my $ope_name	= 'test';
 
 my $website	= new WebService::Eulerian::Analytics::Website( %h_api_params );
 my $ope	= new WebService::Eulerian::Analytics::Website::Ope( %h_api_params );

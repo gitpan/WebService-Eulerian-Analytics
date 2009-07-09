@@ -1,6 +1,6 @@
 package WebService::Eulerian::Analytics::Website::Ope;
 
-# $Id: Ope.pm,v 1.1 2008-09-07 23:31:00 cvscore Exp $
+# $Id: Ope.pm,v 1.1 2008-09-30 00:55:09 cvscore Exp $
 
 use strict;
 
@@ -12,12 +12,12 @@ our @ISA        = qw/ WebService::Eulerian::Analytics /;
 
 =head1	NAME 
 
-WebService::Eulerian::Analytics::Website::Ope - access to the Ope service for a given website : campaigns for outbound traffic.
+WebService::Eulerian::Analytics::Website::Ope - access to the Ope service for a given website : campaigns for inbound traffic.
 
 =head1 DESCRIPTION
 
 This module allow you to access the Ope service holding information 
-about all the partners for your outbound traffic.
+about all the partners for your inbound traffic.
 
 =head1 SYNOPSIS
 

@@ -89,6 +89,8 @@ o payment : type of the order, it's a string describing the type of the payment,
 
 sub replay	{ return shift()->call('replay', @_);	}
 
+sub search	{ return shift()->call('search', @_);	}
+
 =pod
 
 =head1 SEE ALSO

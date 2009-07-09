@@ -1,11 +1,12 @@
 Revision history for Perl module WebService::Eulerian::Analytics
 
-TODO
-  - Website/TPOpe : add / modify new campaigns
-  - Website/TPPublisher : add / modify publishers
-  - Website/TPMedia : add / modify medias
+v0.6	Thu Jul  9 12:32:56 CEST 2009
+  - support for Website/Order : cancel / valid # for automatic validation and 
+  cancelation of order references
+  - fixed #41703 : Wrong perl prerequisite specification (thanks to SREZIC)
+  - support for Website/Order : search method
 
-v0.5 Tue Sep 30 02:45:57 CEST 2008
+v0.5 	Tue Sep 30 02:45:57 CEST 2008
   - support for Website/TPOpedataCick : getLogByTPMediaName
   - support for Website/TPOpe : getById / getByName / search / getURL
 

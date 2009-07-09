@@ -3,6 +3,7 @@ Changes
 examples/tporderinject.pl
 examples/website.pl
 examples/website/ope.pl
+examples/website/order-replay.tmpl
 examples/website/order.pl
 examples/website/tpcategory.pl
 examples/website/tpmedia.pl

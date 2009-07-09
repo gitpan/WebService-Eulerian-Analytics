@@ -1,6 +1,6 @@
 ---
 name: WebService-Eulerian-Analytics
-version: 0.5
+version: 0.6
 author:
   - 'Mathieu Jondet <mathieu@eulerian.com>'
 abstract: Eulerian Analytics API
@@ -13,7 +13,7 @@ requires:
 provides:
   WebService::Eulerian::Analytics:
     file: lib/WebService/Eulerian/Analytics.pm
-    version: 0.5
+    version: 0.6
   WebService::Eulerian::Analytics::TPOrderInject:
     file: lib/WebService/Eulerian/Analytics/TPOrderInject.pm
   WebService::Eulerian::Analytics::Website:
@@ -32,7 +32,7 @@ provides:
     file: lib/WebService/Eulerian/Analytics/Website/TPOpedataClick.pm
   WebService::Eulerian::Analytics::Website::TPPublisher:
     file: lib/WebService/Eulerian/Analytics/Website/TPPublisher.pm
-generated_by: Module::Build version 0.280801
+generated_by: Module::Build version 0.33
 meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
