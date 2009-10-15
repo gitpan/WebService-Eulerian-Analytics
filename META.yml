@@ -1,6 +1,6 @@
 ---
 name: WebService-Eulerian-Analytics
-version: v0.6.1
+version: 0.7
 author:
   - 'Mathieu Jondet <mathieu@eulerian.com>'
 abstract: Eulerian Analytics API
@@ -15,7 +15,7 @@ configure_requires:
 provides:
   WebService::Eulerian::Analytics:
     file: lib/WebService/Eulerian/Analytics.pm
-    version: v0.6.1
+    version: 0.7
   WebService::Eulerian::Analytics::TPOrderInject:
     file: lib/WebService/Eulerian/Analytics/TPOrderInject.pm
   WebService::Eulerian::Analytics::Website:
