@@ -58,6 +58,8 @@ o date_from : date from value (dd/mm/yyyy format)
 
 o date_to : date to value (dd/mm/yyyy format) inclusive
 
+o without_channel : provide inbound channel information, optionnal (default: 0), if set to 1 the inbound channel information won't be provided. The response will be faster.
+
 =back
 
 =head3 output
@@ -110,6 +112,8 @@ o date_from : date from value (dd/mm/yyyy format)
 
 o date_to : date to value (dd/mm/yyyy format) inclusive
 
+o without_channel : provide inbound channel information, optionnal (default: 0), if set to 1 the inbound channel information won't be provided. The response will be faster.
+
 =back
 
 =head3 output
@@ -139,6 +143,58 @@ o date_to : date to value (dd/mm/yyyy format) inclusive
 =cut
 
 sub getLogByTPMediaName	{ return shift()->call('getLogByTPMediaName', @_); }
+
+=pod
+
+=head1 METHODS
+
+=head2 getLogByOpeName : return all information on outbound clicks for a given inbound campaign
+
+Note: you can only request data on a day timespan.
+
+=head3 input
+
+=over 4
+
+=item * id of the targetted website
+
+=item * hash reference with the following parameters :
+
+o ope_name : name of the inbound compaign
+
+o date_from : date from value (dd/mm/yyyy format)
+
+o date_to : date to value (dd/mm/yyyy format) inclusive
+
+=back
+
+=head3 output
+
+=over 4
+
+=item * array reference containing data on each outbound click
+
+=back
+
+=head3 sample
+
+	my $ra_log = $api->getLogByOpeName($my_website_id, {
+	  ope_name	=> 'NAME_OF_INBOUND_CAMPAIGN',
+	  date_from 	=> 'DD/MM/YYYY',
+	  date_to	=> 'DD/MM/YYYY',
+	});
+	#
+	if ( $api->fault ) {
+	 die $api->faultstring();
+	}
+	#
+	for ( @{ $ra_log } ) {
+	 print "date ".localtime($_->{epoch})." | IP : ".$_->{ip}." | Outbound Campaign : ".$_->{tpope_name}."\n";
+	}
+
+=cut
+
+sub getLogByOpeName	{ return shift()->call('getLogByOpeName', @_); }
 
 =pod
 
