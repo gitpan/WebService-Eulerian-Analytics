@@ -1,12 +1,18 @@
 Revision history for Perl module WebService::Eulerian::Analytics
 
+v0.8	Mon Dec 21 01:29:01 CET 2009
+  - support for Website/Order : cancel / valid # for automatic validation and 
+  cancelation of order references with documentation
+
 v0.7	Thu Oct 15 20:03:05 CEST 2009
   - support for Website/TPOpedataClick : getLogByOpeName
   - added without_channel option for Website/TPOpedataClick : getLogByTPMediaName / getLogByTPOpeName
 
+v0.6.1	(failed on pause index)
+
 v0.6	Thu Jul  9 12:32:56 CEST 2009
   - support for Website/Order : cancel / valid # for automatic validation and 
-  cancelation of order references
+  cancelation of order references (defered to v0.8)
   - fixed #41703 : Wrong perl prerequisite specification (thanks to SREZIC)
   - support for Website/Order : search method
 

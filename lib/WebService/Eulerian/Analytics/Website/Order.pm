@@ -89,7 +89,151 @@ o payment : type of the order, it's a string describing the type of the payment,
 
 sub replay	{ return shift()->call('replay', @_);	}
 
+=pod
+
+=head1 METHODS
+
+=head2 search : generate a search method on the order database.
+
+=head3 input
+
+=over 4
+
+=item * id of the website
+
+=item * hash reference with the following parameters :
+
+o order-from-epoch : from epoch date
+
+o order-to-epoch : to epoch date
+
+o order-from : from date (dd/mm/yyyy)
+
+o order-to : to date (dd/mm/yyyy)
+
+o order-ref : order reference
+
+=back
+
+=head3 output
+
+=over 4
+
+=item * total : total number of orders for given search
+
+=item * result : array ref of hash ref for each order
+
+=back
+
+=head3 sample
+
+	my $rh_order = $api->search( $my_website_id, {
+	 'order-ref'	=> 'XXXXXXX'
+	});
+	#
+	if ( $api->fault ) {
+	 die $api->faultstring();
+	}
+	#
+	for ( @{ $rh_order->{result} } ) {
+	 print "Order ref : ".$_->{order_ref}." at ".localtime($_->{order_date})."\n";
+	}
+
+=cut
+
 sub search	{ return shift()->call('search', @_);	}
+
+=pod
+
+=head1 METHODS
+
+=head2 valid : validate a list of orders
+
+=head3 input
+
+=over 4
+
+=item * id of the website
+
+=item * array of order references to validate
+
+=back
+
+=head3 output
+
+=over 4
+
+=item * totalerror : total number of errors
+
+=item * totaltotreat : total number of reference to treat
+
+=item * totaltreated : total number of treated references
+
+=item * result : array ref of hash ref for each order
+
+=back
+
+=head3 sample
+
+	my $rh_order = $api->valid( $my_website_id, 'XXXXX', 'YYYYY');
+	#
+	if ( $api->fault ) {
+	 die $api->faultstring();
+	}
+	#
+	for ( @{ $rh_order->{result} } ) {
+	 print "Order ref : ".$_->{order_ref}." at ".localtime($_->{order_date})."\n";
+	}
+
+=cut
+
+sub valid	{ return shift()->call('valid', @_);	}
+
+=pod
+
+=head1 METHODS
+
+=head2 cancel : cancel a list of orders
+
+=head3 input
+
+=over 4
+
+=item * id of the website
+
+=item * array of order references to cancel 
+
+=back
+
+=head3 output
+
+=over 4
+
+=item * totalerror : total number of errors
+
+=item * totaltotreat : total number of reference to treat
+
+=item * totaltreated : total number of treated references
+
+=item * result : array ref of hash ref for each order
+
+=back
+
+=head3 sample
+
+	my $rh_order = $api->cancel( $my_website_id, 'XXXXX', 'YYYYY');
+	#
+	if ( $api->fault ) {
+	 die $api->faultstring();
+	}
+	#
+	for ( @{ $rh_order->{result} } ) {
+	 print "Order ref : ".$_->{order_ref}." at ".localtime($_->{order_date})."\n";
+	}
+
+=cut
+
+sub cancel	{ return shift()->call('cancel', @_);	}
 
 =pod
 

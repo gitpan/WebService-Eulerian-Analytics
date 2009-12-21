@@ -8,7 +8,7 @@ use ExtUtils::MakeMaker;
 my %opts	= (
   NAME              	=> 'WebService::Eulerian::Analytics',
   VERSION_FROM      	=> 'lib/WebService/Eulerian/Analytics.pm',
-);
+  );
 
 if ($ExtUtils::MakeMaker::VERSION >= 5.43) {
  @opts{qw/AUTHOR ABSTRACT/} = 
@@ -24,3 +24,4 @@ WriteMakefile( %opts );
 
 
 1;
+
